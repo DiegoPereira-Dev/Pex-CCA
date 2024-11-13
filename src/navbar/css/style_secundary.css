@@ -1,0 +1,56 @@
+.navbar-dark {
+    background-color: #000;
+}
+
+.navbar-dark .navbar-brand {
+    color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+}
+.container-lg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.carousel-inner {
+    background-color: #fff;
+}
+.carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #000;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: #000;
+}
+
+.carousel-indicators li {
+    background-color: #000;
+}
+
+.carousel-indicators .active {
+    background-color: #008000;
+}
+
+/* Estilos dos botões do carrosel */
+
+.carousel-control-prev{
+    position: absolute;
+    left: 9%;
+    top: 60%;
+    transform: translate(-50%,-50%);
+}
