@@ -2,7 +2,7 @@ const slides = document.querySelectorAll('.slide');
 const indicators = document.querySelectorAll('.indicator');
 let currentSlide = 0;
 let autoSlideInterval;
-const autoSlideTime = 5000; // Tempo de 5 segundos entre os slides
+const autoSlideTime = 10000; // Tempo de 5 segundos entre os slides
 
 // Função para alterar o slide
 function changeSlide(direction) {

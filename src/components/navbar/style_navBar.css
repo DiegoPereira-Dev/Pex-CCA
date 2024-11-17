@@ -1,0 +1,64 @@
+:root {
+    --primary-color: #000000;
+    --color-component: #2c3e5042;
+}
+/* Cabeçalho */
+.navbar {
+    background-color: #ffffff;
+    border-radius: 20px;
+    min-height: 90px;
+    padding: 20px;
+}
+
+/* Logo */
+.logo img {
+    width: 40px;
+    height: 50px;
+}
+
+/* links do cabeçalho */
+/* Estilo para os botões */
+.navbar-nav {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px 0;
+    border-radius: 20px;
+}
+
+.nav {
+    position: relative;
+    display: flex;
+    gap: 20px; /* Espaçamento entre os links */
+    list-style: none; /* Remova marcadores de lista */
+    padding: 0;
+    margin: 0;
+}
+
+.nav-option {
+    list-style: none;
+}
+
+.nav-links{
+    text-decoration: none;
+    color: #000000;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.nav-links.active {
+    color: var(--color-component);
+}
+.border-slider {
+    position: absolute; /* Necessário para controlar posição */
+    height: 3px; /* Altura da borda */
+    background-color:gray; /* Cor do slider */
+    bottom: 0; /* Fixa no fundo do contêiner */
+    left: 0; /* Posição inicial */
+    width: 0; /* Começa sem largura */
+    transition: all 0.3s ease-in-out; /* Transição suave */
+    margin-bottom: 5px;
+}

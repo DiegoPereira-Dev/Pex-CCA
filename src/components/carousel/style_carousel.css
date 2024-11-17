@@ -3,20 +3,13 @@
     --color-component: #2c3e5042;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 .carrossel {
-    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     overflow: hidden;
     position: relative;
     border-radius: 20px;
-    background: url(https://picsum.photos/200/300
-    );
+    background-color: #ffffff;
 }
 
 .carrossel-container {
@@ -25,14 +18,17 @@
     position: relative;
     width: 100%;
     transition: transform 0.5s ease-in-out;
-    border: 1px solid #ccc;
     padding: 20px;
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
     background-color: var();
 }
 
 .carrossel-container img {
+    height: auto;
+    display: block;
+    border-radius: 8px;
     height: 400px;
+    width: 100%;
 }
 
 .slide {
@@ -51,14 +47,27 @@
     opacity: 1;
     position: relative;
 }
-
-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 8px;
+ /*  Botão de compartilhamento*/
+.container-share {
+    position: absolute;
+    top: 1px;
+    right: 10px;
+    color: #ffffff;
+    cursor: pointer;
+    z-index: 10;
+    padding: 10px;
 }
 
+.btn i {
+    /* Botão de compartilhamento */
+    color: var(--primary-color);
+    font-size: 20px;
+}
+
+.share:hover {
+    transform: scale(0.9);
+}
+/* Botões de navegação do carrossel */
 .nav-btn {
     position: absolute;
     top: 50%;
@@ -101,3 +110,8 @@ img {
     background-color: rgba(255, 255, 255, 1);
 }
 
+/* Legenda do carrossel */
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
