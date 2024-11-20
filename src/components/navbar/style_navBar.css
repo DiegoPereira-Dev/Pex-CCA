@@ -1,10 +1,8 @@
-:root {
-    --primary-color: #000000;
-    --color-component: #2c3e5042;
-}
+@import '/src/css/variables.css';
+
 /* Cabeçalho */
-.navbar {
-    background-color: #ffffff;
+.navbar{
+    background: var(--primary-color);
     border-radius: 20px;
     min-height: 90px;
     padding: 20px;
