@@ -1,25 +1,53 @@
 @import '/src/css/variables.css';
 
-.carousel{
+.carrossel {
     border-radius: 20px;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
-    background:var(--primary-color); /* Gradiente suave */
-    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: var(--primary-color);
+
     padding: 20px;
+}
+
+.carousel-header {
+    text-align: center;
+    margin-bottom: 20px;
+    margin: 0 auto;
+}
+
+.carousel-header h2 {
+    font-size: 2rem;
+    color: #333;
+    /* Ajuste conforme a paleta de cores do seu site */
+    font-weight: bold;
+}
+
+.carousel-header p {
+    font-size: 1rem;
+    color: #666;
+    /* Ajuste conforme a paleta de cores do seu site */
+    margin-top: 5px;
 }
 
 .carousel-item img {
     border-radius: 20px;
-    margin:  0 auto;
+    margin: 0 auto;
     max-width: 1000px;
     max-height: 390px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+.carousel-item img:hover {
+    transform: scale(1.01);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
 .container-share {
     position: absolute;
     top: 1px;
-    right: 10px;
+    left: 10px;
     background-color: #ffffff;
     cursor: pointer;
     z-index: 10;
@@ -27,6 +55,7 @@
     margin-top: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .btn i {
@@ -37,4 +66,86 @@
 
 .share:hover {
     transform: scale(0.9);
+}
+
+/* O modal está oculto por padrão */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fundo escuro */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    text-align: center;
+}
+
+.modal img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.modal-caption h5 {
+    margin: 10px 0;
+}
+
+.modal-hint {
+    font-size: 12px;
+    color: #555;
+    margin-top: 15px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Texto de informação */
+.click-hint {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    display: none;
+}
+
+.carousel-item:hover .click-hint {
+    display: block;
+}
+/* indicadores */
+
+.carousel-indicators-container {
+    background-color: rgba(0, 0, 0, 0.2);
+    /* Fundo escuro com transparência */
+    padding: 10px 0;
+}
+
+.carousel-indicators button {
+    background-color: #fff;
+}
+
+.carousel-indicators .active {
+    background-color: var(--color-component);
+    /* Azul para o indicador ativo */
 }

@@ -16,6 +16,7 @@
     <!-- <link rel="stylesheet" href="src/components/carousel/style_carousel.css"> -->
     <title>Club Canto do Alto</title>
 </head>
+
 <body>
     <header><!-- Cabeçalho -->
         <nav class="navbar">
@@ -47,29 +48,39 @@
     </header>
     <main>
         <section class="carrossel">
+            <div class="corousel-header">
+                <h2 class=""><i class="fas fa-calendar-alt"></i>Eventos da semana</h2>
+                <hr class="header-divider">
+                <p>Confira os principais eventos</p>
+            </div>
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                <div class="container-share">
-                    <button class="btn" aria-label="Compartilhar conteúdo">
-                        <i class="fas fa-share-alt"></i>
-                    </button>
-                </div>
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                        class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                </div>
+                <div class="carousel-indicator-container">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1">
+                        </button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                </div><!-- carousel-indicator-container -->
                 <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="3000">
-                        <img src="src/assets/img/evento1.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-item active" data-bs-interval="5000">
+                        <img src="src/assets/img/evento1.jpg" class="d-block w-100" alt="..." data-title="Evento 1"
+                            data-description="Futebol - 15/03 - 15h - Estádio do Morumbi"
+                            title="Clique para mais informações">
+
                     </div>
-                    <div class="carousel-item" data-bs-interval="3000">
-                        <img src="src/assets/img/evento2.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="src/assets/img/evento2.jpg" class="d-block w-100" alt="..." data-title="Evento 1"
+                            data-description="Futebol - 15/03 - 15h - Estádio do Morumbi"
+                            title="Clique para mais informações">
                     </div>
-                    <div class="carousel-item" data-bs-interval="3000">
-                        <img src="src/assets/img/evento3.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="src/assets/img/evento3.jpg" class="d-block w-100" alt="..." data-title="Evento 1"
+                            data-description="Futebol - 15/03 - 15h - Estádio do Morumbi"
+                            title="Clique para mais informações">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -83,53 +94,23 @@
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
-            <!-- <div class="carrossel-container">
-                <div class="container-share">
-                    <button class="btn" aria-label="Compartilhar conteúdo">
-                        <i class="fas fa-share-alt"></i>
-                    </button>
-                </div>
-                <div class="slide active">
-                    <img src="src/assets/img/evento1.jpg" alt="Imagem 1">
-                    <div class="carousel-caption">
-                        <h5>Evento 1</h5>
-                        <p>Futebol - 15/03 - 15h - Estádio do Morumbi</p>
+            <!-- Modal para exibir informações -->
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <div class="container-share">
+                        <button class="btn" aria-label="Compartilhar conteúdo">
+                            <i class="fas fa-share-alt"></i>
+                        </button>
+                    </div><!-- container-share -->
+                    <span class="close">&times;</span>
+                    <img id="modal-image" src="" alt="Imagem ampliada">
+                    <div class="modal-caption">
+                        <h5 id="modal-title"></h5>
+                        <p id="modal-description"></p>
+                        <p class="modal-hint">Clique fora da imagem ou no "X" para fechar.</p>
                     </div>
                 </div>
-                <div class="slide">
-                    <img src="src/assets/img/evento2.jpg" alt="Imagem 2">
-                    <div class="carousel-caption">
-                        <h5>Evento 2</h5>
-                        <p>Congresso de Administração</p>
-                    </div>
-                </div>
-                <div class="slide">
-                    <img src="src/assets/img/evento3.jpg" alt="Imagem 3">
-                    <div class="carousel-caption">
-                        <h5>Evento 3</h5>
-                        <p>Tecnologia e Inovação</p>
-                    </div>
-                </div>
-                <button class="nav-btn prev-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-chevron-left" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
-                    </svg>
-                </button>
-                <button class="nav-btn next-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-chevron-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-                    </svg>
-                </button>
             </div>
-            <div class="carousel-indicators">
-                <span class="indicator btn-active" data-slide="0"></span>
-                <span class="indicator" data-slide="1"></span>
-                <span class="indicator" data-slide="2"></span>
-            </div> -->
         </section>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -137,7 +118,7 @@
         crossorigin="anonymous"></script>
     <script src="src/components/navbar/animate_buttonsNav.js"></script>
     <!-- <script src="src/components/carousel/navigation_carousel.js"></script> -->
-    <!-- <script src="src/components/carousel/scriptTeste.js"></script> -->
+    <script src="src/components/carousel/test_modal.js"></script>
 
 </body>
 
