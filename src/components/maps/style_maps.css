@@ -1,0 +1,12 @@
+#map {
+  height: 400px;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 40px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25)
+}
+
+.section-localization h1 {
+  font-size: 2.5rem;
+  margin-top: 100px;
+}
