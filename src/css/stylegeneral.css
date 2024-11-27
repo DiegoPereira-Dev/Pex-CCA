@@ -20,3 +20,9 @@ header {
 .bd {
     border: 2px solid red;
 }
+
+.container-main{
+    background:  linear-gradient(145deg, #f3f4f6, #e2e2e2);
+    padding: 30px;
+    border-radius: 20px;
+}

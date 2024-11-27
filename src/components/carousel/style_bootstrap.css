@@ -5,30 +5,12 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     background: var(--primary-color);
-
     padding: 20px;
+    margin-top: 20px;
 }
-
-.carousel-header {
+.corousel-title h2,p{
     text-align: center;
-    margin-bottom: 20px;
-    margin: 0 auto;
 }
-
-.carousel-header h2 {
-    font-size: 2rem;
-    color: #333;
-    /* Ajuste conforme a paleta de cores do seu site */
-    font-weight: bold;
-}
-
-.carousel-header p {
-    font-size: 1rem;
-    color: #666;
-    /* Ajuste conforme a paleta de cores do seu site */
-    margin-top: 5px;
-}
-
 .carousel-item img {
     border-radius: 20px;
     margin: 0 auto;
@@ -59,7 +41,6 @@
 }
 
 .btn i {
-    /* Botão de compartilhamento */
     color: var(--primary-color);
     font-size: 20px;
 }
@@ -78,7 +59,6 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
-    /* Fundo escuro */
     justify-content: center;
     align-items: center;
 }
@@ -148,4 +128,15 @@
 .carousel-indicators .active {
     background-color: var(--color-component);
     /* Azul para o indicador ativo */
+}
+/* Setas de navegação */
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    background-color: var(--color-component);
+    cursor: pointer;
+    z-index: 10;
+    padding: 30px;
+    margin-top: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);                       
 }
