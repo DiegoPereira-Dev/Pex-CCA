@@ -26,3 +26,8 @@ header {
     padding: 30px;
     border-radius: 20px;
 }
+
+#logo img{
+    height: 80px;
+    width: 80px;
+}

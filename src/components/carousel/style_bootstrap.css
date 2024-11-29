@@ -118,10 +118,8 @@
     display: block;
 }
 /* indicadores */
-
 .carousel-indicators-container {
     background-color: rgba(0, 0, 0, 0.2);
-    /* Fundo escuro com transparência */
     padding: 10px 0;
 }
 
@@ -138,41 +136,29 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: #ffffff; /* Um verde escuro que combina com a paleta */
-    border-radius: 50%; /* Torna o botão circular */
-    width: 55px; /* Largura do botão */
-    height: 55px; /* Altura do botão */
+    background-color: #ffffff;
+    border-radius: 50%;
+    width: 55px; 
+    height: 55px; 
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0.7; /* Um pouco de transparência */
-    transition: opacity 0.3s ease; /* Efeito suave ao passar o mouse */
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
 }
 
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
     transition: 0.5s;
-    opacity: 5; /* Aumenta a opacidade ao passar o mouse */
+    opacity: 5; 
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    filter: invert(1); /* Inverte a cor do ícone para contrastar com o fundo */
-    width: 20px; /* Ajusta o tamanho do ícone */
+    filter: invert(1);
+    width: 20px; 
     height: 20px;
 }
-
-/* .carousel-control-prev-icon, .carousel-control-next-icon{
-    background-color:var(--color-component);
-    cursor: pointer;
-    z-index: 10;
-    padding: 20px;
-    margin-top: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 100%;
-    border: 1px solid rgba(0, 0, 0, 0.1);                   
-}
- */
 /* Secção sobre nós */
 .section-aboutUs{
     margin-top: 100px;
