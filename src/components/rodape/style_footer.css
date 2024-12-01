@@ -7,3 +7,11 @@
 .bold{
     font-weight: bold;
 }
+
+.text-md-end, .text-center p{
+    font-size: 13px;
+}
+
+.text-center p {
+    transform: translateX(-40%);
+}

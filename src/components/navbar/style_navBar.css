@@ -1,7 +1,7 @@
 @import '/src/css/variables.css';
 
 /* Cabeçalho */
-.navbar{
+.navbar {
     background: var(--primary-color);
     border-radius: 20px;
     min-height: 90px;
@@ -24,12 +24,11 @@
     padding: 10px 0;
     border-radius: 20px;
 }
-
 .nav {
     position: relative;
     display: flex;
-    gap: 20px; /* Espaçamento entre os links */
-    list-style: none; /* Remova marcadores de lista */
+    gap: 20px;
+    list-style: none;
     padding: 0;
     margin: 0;
 }
@@ -38,7 +37,7 @@
     list-style: none;
 }
 
-.nav-links{
+.nav-links {
     text-decoration: none;
     color: #000000;
     padding: 10px 20px;
@@ -47,16 +46,18 @@
     font-weight: bold;
     cursor: pointer;
 }
+
 .nav-links.active {
     color: var(--color-component);
 }
+
 .border-slider {
-    position: absolute; /* Necessário para controlar posição */
-    height: 3px; /* Altura da borda */
-    background-color:gray; /* Cor do slider */
-    bottom: 0; /* Fixa no fundo do contêiner */
-    left: 0; /* Posição inicial */
-    width: 0; /* Começa sem largura */
-    transition: all 0.3s ease-in-out; /* Transição suave */
+    position: absolute;
+    height: 3px;
+    background-color: gray;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    transition: all 0.3s ease-in-out;
     margin-bottom: 5px;
 }

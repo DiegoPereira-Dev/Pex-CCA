@@ -1,17 +1,28 @@
-function initMap() {
-    var location = { lat: -7.67522033805875, lng: -41.87884276754277 };// Definir a localização (exemplo com a latitude e longitude de São Paulo)
+document.addEventListener('DOMContentLoaded', function () {
+    const coordenadas = {
+        lat: -7.67522033805875, 
+        lng: -41.87884276754277
+    };
 
-    // Cria o mapa
-    var map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 12, // Nível de zoom
-        center: location, // Definir o centro do mapa
+    const map = L.map('map').setView([coordenadas.lat, coordenadas.lng], 13);
+
+    
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    }).addTo(map);
+
+    L.marker([coordenadas.lat, coordenadas.lng])
+        .addTo(map)
+        .bindPopup('Clique no mapa para abrir a navegação.')
+        .openPopup();
+
+    map.on('click', function () {
+        const confirmar = confirm('Você deseja abrir o aplicativo de mapas para seguir a rota?');
+        if (confirmar) {
+            const url = `https://www.google.com/maps/dir/?api=1&destination=${coordenadas.lat},${coordenadas.lng}`;
+            window.open(url, '_blank');
+        } else {
+            alert('Redirecionamento cancelado!');
+        }
     });
-
-    // Adicionar um marcador no mapa
-    var marker = new google.maps.Marker({
-        position: location,
-        map: map,
-        title: "Club Canto do alto", // Texto que aparece ao passar o mouse sobre o marcador
-    });
-
-}
+});

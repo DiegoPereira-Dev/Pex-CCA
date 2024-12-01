@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- OpenStreetMap (OSM) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -15,41 +17,45 @@
     <link rel="stylesheet" href="src/components/carousel/style_bootstrap.css">
     <link rel="stylesheet" href="src/components/maps/style_maps.css">
     <link rel="stylesheet" href="src/components/rodape/style_footer.css">
+     <!-- Geral -->
+     <link rel="stylesheet" href="src/css/media.css">
     <!-- <link rel="stylesheet" href="src/components/carousel/style_carousel.css"> -->
     <title>Club Canto do Alto</title>
 </head>
 
 <body>
     <header><!-- Cabeçalho -->
-        <nav class="navbar">
-            <div>
-                <div id="logo">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <div class="navbar-brand" id="logo">
                     <a href="#">
                         <img src="src/assets/img/Logo.png" alt="Logo">
                     </a>
-                </div><!-- logo -->
-                <div class="navbar-nav">
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-nav collapse navbar-collapse mx-auto" id="navbarNav">
                     <ul class="nav">
-                        <!-- Links de navegação -->
                         <li class="nav-option">
-                            <a class="nav-links active" href="#">Eventos</a>
+                            <a class="nav-links active" href="#eventos">EVENTOS</a>
                         </li>
                         <li class="nav-option">
-                            <a class="nav-links" href="#">Produtos</a>
+                            <a class="nav-links" href="#sobrenos">SOBRE NÓS</a>
                         </li>
                         <li class="nav-option">
-                            <a class="nav-links" href="#">Avisos</a>
+                            <a class="nav-links" href="#localizacao">LOCALIZAÇÃO</a>
                         </li>
                     </ul>
-                    <!-- Slider -->
                     <div class="border-slider"></div>
                 </div>
             </div>
-        </nav><!-- navbar -->
+        </nav>
     </header>
     <main>
         <div class="container-main">
-            <div class="corousel-title">
+            <div class="corousel-title" id="eventos">
                 <h2>
                     <i class="fas fa-calendar-alt"></i>
                     Próximos eventos
@@ -122,7 +128,7 @@
             </section>
             <section class="section-aboutUs">
                 <div class="container-aboutUs">
-                    <div class="aboutUs">
+                    <div class="aboutUs" id="sobrenos">
                         <h1>Sobre nós</h1>
                         <hr>
                         <p> Somos uma empresa familiar com 15 anos de história, regida por pais e filhos. É um espaço de
@@ -132,7 +138,7 @@
                 </div>
             </section>
             <section class="section-localization">
-                <div class="container my-4">
+                <div class="container my-4" id="localizacao">
                     <h1 class="text-center">Localização</h1>
                     <hr>
                     <div class="row">
@@ -146,13 +152,15 @@
                 <hr>
                 <div class="container">
                     <div class="row align-items-center">
-                        <div class="col-md-4 text-center text-md-start mb-3 mb-md-0" id="logo">
-                            <img src="src/assets/img/Logo.png" alt="Logo">
+                        <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+                            <a id="logo" href="#">
+                                <img src="src/assets/img/Logo.png" alt="Logo">
+                            </a>
                         </div>
                         <div class="col-md-4 text-center">
                             <p>
                                 <span class="bold">Telefone:</span>
-                                (89) 994-309692
+                                (89) 99430-9692
                             </p>
                             <p>
                                 <span class="bold">E-mail:</span>
@@ -160,23 +168,25 @@
                             </p>
                         </div>
                         <div class="col-md-4 text-center text-md-end">
-                            <p class="bold">&copy; 2024 diegodev.</p>
+                            <p class="bold">&copy; 2024 Club Canto do Alto.Todos os direitos reservados</p>
+                            <p>Desenvolvido por <a href="https://github.com/DiegoPereira-Dev">&lt;Dev/diego&gt;</a>.</p>
                         </div>
                     </div>
                 </div>
             </footer>
         </div>
     </main>
+    <!-- OpenStreetMap (OSM) -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- botstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!--JavaScript  -->
     <script src="src/components/navbar/animate_buttonsNav.js"></script>
     <script src="src/components/carousel/test_modal.js"></script>
     <script src="src/components/maps/maps.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script><!-- botstrap -->
-    <!-- google maps -->
-    <script async
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyE4zBYPpqpZuRDsVRCHUTs2KsXOqt7Wc&callback=initMap">
-        </script>
+   
 </body>
 
 </html>
